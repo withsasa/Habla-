@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habla+ - Quiénes somos</title>
+  <!-- Fuente juvenil aesthetic -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/quienes.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header>
+    <div class="navbar">
+      <img src="assets/img/logo-2.png" alt="SMAC logo" class="logo"/>
+      <nav>
+        <a href="index.html">INICIO</a>
+        <a href="quienes.html" class="active">QUIÉNES SOMOS</a>
+        <a href="clase.html">CLASES</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <div class="container">
+    <h1>¿Quiénes somos?</h1>
+    <p>
+      Somos <b>SMAC</b>, una plataforma educativa juvenil dedicada a desarrollar la oratoria y el liderazgo en estudiantes de secundaria. 
+      Creemos que cada voz tiene poder y que, con práctica y motivación, cualquier estudiante puede expresarse con seguridad y convertirse en un verdadero líder.
+    </p>
+
+    <!-- CARDS EQUIPO -->
+    <div class="team">
+      <div class="card">CEO: Sasha Raqui</div>
+      <div class="card">CTO: Alexia Minaya</div>
+      <div class="card">CMO: Miguel Alfaro</div>
+      <div class="card">CFO: Albert Córdova</div>
+    </div>
+
+    <!-- HISTORIA + CARRUSEL -->
+    <div class="historia-contenido">
+      
+      <!-- CARRUSEL -->
+      <div class="carousel">
+        <img src="assets/img/grupo 1.jfif" class="active">
+        <img src="assets/img/grupo2.jpg">
+        <img src="assets/img/grupo3.jpg">
+        <button class="prev" onclick="cambiarImagen(-1)">&#10094;</button>
+        <button class="next" onclick="cambiarImagen(1)">&#10095;</button>
+      </div>
+
+      <!-- HISTORIA -->
+      <div class="historia">
+        <h3>HISTORIA:</h3>
+        <p>
+          SMAC nació de una necesidad muy presente en las aulas: muchos estudiantes sienten miedo al hablar en público, 
+          no confían en su voz y no encuentran espacios donde puedan entrenar sus habilidades de liderazgo. 
+        </p>
+        <p>
+          Un grupo de jóvenes visionarios decidió transformar esta realidad creando SMAC, una plataforma digital que combina retos semanales, 
+          recursos prácticos y retroalimentación entre pares. 
+        </p>
+        <p>
+          Con el tiempo, SMAC pasó de ser un simple proyecto escolar a convertirse en una comunidad viva y empoderadora, 
+          convirtiéndose en un símbolo de participación y liderazgo juvenil.
+        </p>
+      </div>
+    </div>
+
+    <!-- VALORES -->
+    <div class="valores">
+      <div class="valor"><b>Confianza ✨</b>: Creer en uno mismo como primer paso para liderar.</div>
+      <div class="valor"><b>Colaboración 🤝</b>: Crecer en equipo, apoyando a cada compañero.</div>
+      <div class="valor"><b>Superación 🚀</b>: Enfrentar los miedos y convertirlos en fortalezas.</div>
+    </div>
+  </div>
+<div class="social-links">
+  <a href="https://www.instagram.com/" target="_blank" class="social-btn instagram">Instagram</a>
+  <a href="https://www.facebook.com/" target="_blank" class="social-btn facebook">Facebook</a>
+  <a href="https://www.tiktok.com/" target="_blank" class="social-btn tiktok">TikTok</a>
+  <a href="https://www.youtube.com/" target="_blank" class="social-btn youtube">YouTube</a>
+  <a href="https://wa.me/1234567890" target="_blank" class="social-btn whatsapp">WhatsApp</a>
+</div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 HablaLíder - Plataforma Juvenil de Oratoria y Liderazgo
+  </footer>
+
+  <!-- BOTÓN DE AYUDA -->
+  <button class="ayuda">Ayuda</button>
+
+  <!-- JS CARRUSEL -->
+  <script>
+    let index = 0;
+    const images = document.querySelectorAll(".carousel img");
+
+    function mostrarImagen(n) {
+      images.forEach(img => img.classList.remove("active"));
+      index = (n + images.length) % images.length;
+      images[index].classList.add("active");
+    }
+
+    function cambiarImagen(n) {
+      mostrarImagen(index + n);
+    }
+
+    // Carrusel automático cada 5 segundos
+    setInterval(() => cambiarImagen(1), 5000);
+  </script>
+
+</body>
+</html>
+

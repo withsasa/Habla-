@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Habla+ - Inicio</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="navbar">
+      <img src="assets/img/logo-2.png" alt="SMAC logo" class="logo"/>
+      <nav>
+        <a href="index.html" class="active">INICIO</a>
+        <a href="quienes.html">QUIENES SOMOS</a>
+        <a href="clase.html">CLASES</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+    <h2 class="frase">Aprende hoy, Lidera el mañana!</h2>
+    <p class="sub-frase">Descubre el poder de tu voz y transforma tu futuro con nosotros.</p>
+
+<div class="cta-buttons">
+  <a href="pagina-unete.html" class="btn-primary" id="joinBtn">Certificados </a>
+  <a href="pagina-quienes.html" class="btn-secondary">Alianzas </a>
+  <a href="pagina-contacto.html" class="btn-tertiary">Programas</a>
+</div>
+
+<div class="mini-benefits">
+  <div class="mini-box">
+    🎤 <h4>Habla con seguridad</h4>
+  </div>
+  <div class="mini-box">
+    🌟 <h4>Conquista tus metas</h4>
+  </div>
+  <div class="mini-box">
+    🌍 <h4>Conecta con el mundo</h4>
+  </div>
+</div>
+
+<div class="carousel-wrapper">
+  <div class="side-content left-side">
+    <img src="assets/img/microfono.png" alt="Micrófono" class="side-icon">
+    <p class="side-phrase">Tu voz es tu poder</p>
+  </div>
+
+  <div class="carousel-container">
+    <button class="carousel-btn" onclick="prevSlide()">&#9664;</button>
+    <img id="carousel-image" src="assets/img/carrusel1.jpeg" alt="Imagen carrusel">
+    <button class="carousel-btn" onclick="nextSlide()">&#9654;</button>
+  </div>
+
+  <div class="side-content right-side">
+    <img src="assets/img/gente.jpg" alt="Público" class="side-icon">
+    <p class="side-phrase">El futuro te escucha</p>
+  </div>
+</div>
+
+
+    <a href="clase.html" class="join-button" id="joinBtn">ÚNETE YA!!</a>
+
+    <section class="info-section">
+      <div class="box">
+        <h3>MISIÓN:</h3>
+        <p>
+          "En SMAC, nuestra misión es empoderar a personas de todas las edades, niveles y contextos a desarrollar una comunicación efectiva, segura y auténtica. A través de una formación online de alto impacto, accesible y centrada en la práctica real, ayudamos a nuestros estudiantes a vencer el miedo escénico, estructurar discursos con claridad y expresar sus ideas con confianza y liderazgo. Creemos que una buena oratoria puede inspirar, influir y transformar realidades. En SMAC, formamos comunicadores, líderes y agentes de cambio."
+        </p>
+      </div>
+
+      <div class="box">
+        <h3>VISIÓN:</h3>
+        <p>
+          "En SMAC, aspiramos a ser la comunidad líder en transformar la manera en que las personas se expresan y conectan en el mundo. Visualizamos un futuro donde cada estudiante, sin importar su edad, origen o experiencia, descubra el poder de su voz para inspirar confianza y unión. Nuestra meta es impactar globalmente, facilitando el acceso a una educación de oratoria innovadora, práctica y humana. Soñamos con un mundo en el que la comunicación auténtica rompa barreras, cambie realidades y forme líderes capaces de generar cambios positivos y sostenibles en la sociedad."
+        </p>
+      </div>
+    </section>
+    <section class="benefits-section">
+  <h2 class="benefits-title">Beneficios de unirte a SMAC</h2>
+  <div class="benefits-grid">
+    <div class="benefit-box">
+      <h3>🚀 Desarrollo Personal</h3>
+      <p>Mejora tu confianza, supera el miedo escénico y aprende a expresarte con seguridad.</p>
+    </div>
+    <div class="benefit-box">
+      <h3>🎤 Comunicación Efectiva</h3>
+      <p>Aprende técnicas de oratoria para estructurar tus ideas y transmitir mensajes claros.</p>
+    </div>
+    <div class="benefit-box">
+      <h3>🌍 Liderazgo Global</h3>
+      <p>Conviértete en un líder capaz de inspirar y transformar realidades en tu entorno.</p>
+    </div>
+    <div class="benefit-box">
+      <h3>🤝 Comunidad Activa</h3>
+      <p>Conecta con jóvenes de todo el mundo que comparten tu pasión por la comunicación y el liderazgo.</p>
+    </div>
+    <div class="benefit-box">
+      <h3>💡 Innovación y Creatividad</h3>
+      <p>Desarrolla tu pensamiento crítico y creativo con actividades prácticas y dinámicas.</p>
+    </div>
+    <div class="benefit-box">
+      <h3>📚 Formación Accesible</h3>
+      <p>Accede a programas online diseñados para todos los niveles y contextos.</p>
+    </div>
+  </div>
+</section>
+
+
+    <p class="footer-text">Tú eliges el día, tú eliges transformar tu realidad!</p>
+
+    <div class="seccion-ayuda">
+      <button class="btn-ayuda">Ayuda</button>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>@ 2025 HablaLíder - Plataforma Juvenil de Oratoria y Liderazgo</p>
+  </footer>
+
+  <!-- SCRIPT DE CARRUSEL -->
+  <script>
+    const images = [
+      "assets/img/carrusel1.jpeg",
+      "assets/img/carrusel2.png",
+      "assets/img/carrusel3.png",
+      "assets/img/carrusel4.png",
+      "assets/img/carrusel5.png",
+    ];
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const image = document.getElementById('carousel-image');
+      image.src = images[index];
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showSlide(currentIndex);
+    }
+
+    // Animación del botón "ÚNETE YA!!"
+    const joinBtn = document.getElementById('joinBtn');
+    joinBtn.addEventListener('click', () => {
+      joinBtn.classList.add('clicked');
+      setTimeout(() => joinBtn.classList.remove('clicked'), 300);
+    });
+  </script>
+</body>
+</html>
